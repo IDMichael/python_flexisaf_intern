@@ -7,9 +7,13 @@ def get_valid_name(prompt):
 		name = input(prompt + " (or 'q' to cancel): ").strip()
 		if name.lower() == "q":
 			return None
-		if name:
-			return name
-		print("Name must not be empty.")
+		if not name:
+			print("Name must not be empty")
+			continue
+		if not all(char.isalpha() or char.isspace() for char in name):
+			print("Name must contain letters only.")
+			continue
+		return name.title()
 
 def get_valid_age(prompt):
 	while True:
@@ -18,7 +22,7 @@ def get_valid_age(prompt):
 			return None
 		if age.isdigit() and int(age) > 0:
 			return int(age)
-		print("Age must be numbers.")
+		print("Age must be a positive number.")
 
 def get_valid_email(prompt):
 	while True:
@@ -34,13 +38,14 @@ def get_valid_country(prompt):
 		country = input(prompt + " (or 'q' to cancel): ").strip()
 		if country.lower() == "q":
 			return None
-		if country:
-			return country
-		print("Country must not be empty.")
-
+		if not country:
+			print("Country must not be empty.")
+			continue
+		return " ".join(country.split())
+			
 # Profile Management Functions
 def create_profile():
-	print("\n=== Create profile ===\n")
+	print("\n=== Create profile ===")
 	name = get_valid_name("Enter your name: ")
 	if name is None:
 		print("Profile creation cancelled.\n")
@@ -72,7 +77,7 @@ def create_profile():
 	# Save dictionary into a JSON file
 	with open("profile.json", "w") as file:
 		json.dump(profile, file, indent = 4)
-	print("\nProfile saved successfully!\n")
+	print("\nProfile saved successfully!")
 
 # View saved profile
 def view_saved_profile():
@@ -114,7 +119,7 @@ def main():
 			break
 		else:
 			print("Invalid choice. Try again.\n")
-
+			
 if __name__ == "__main__":
 	main()
 	
