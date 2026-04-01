@@ -1,0 +1,24 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+tasklogger_env_export/venv/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore runtime-generated CSV or logs (they will be re-generated)
+# If you want to submit them, remove or comment out these lines
+# expenses.csv
+# log_entries.csv
+# track_logger_actions.txt
+
+# Environment variables
+.env
+.env.*
