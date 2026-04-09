@@ -29,9 +29,17 @@ def get_valid_email(prompt):
 		email = input(prompt + " (or 'q' to cancel): ").strip()
 		if email.lower() == "q":
 			return None
-		if "@" in email and "." in email:
-			return email
-		print("Email must contain '@' and '.'.")
+		if (
+            "@" not in email or
+            "." not in email or
+            email.startswith("@") or
+            email.endswith(".") or
+            email.count("@") != 1
+        	):
+			print("Invalid Email format.")
+			continue
+
+		return email
 
 def get_valid_country(prompt):
 	while True:

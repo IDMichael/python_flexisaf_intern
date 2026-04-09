@@ -12,11 +12,11 @@ This script allows users to:
 This project is beginner-friendly and ideal for learning Python basics, functions, JSON file handling, and input validation.
 
 # Features
-* Input validation for all fields ✅
-* Cancel option (q) during input ✅
-* Persistent JSON storage ✅
-* Menu-driven navigation ✅
-* Beginner-friendly code structure ✅
+* Input validation for all fields 
+* Cancel option (q) during input 
+* Persistent JSON storage 
+* Menu-driven navigation 
+* Beginner-friendly code structure 
 
 
 # Install Required Libraries
@@ -33,7 +33,7 @@ os      -   Check if profile file exists
 Run the program:
 python user_profile.py
 
-On some systems you may need to use python3 user_profile.py.
+On some systems you may need to use python3 profile_manager.py.
 
 Using the Menu
 === Select an option ===
@@ -64,11 +64,8 @@ Example terminal interaction:
 Choose an option: 1
 
 Enter your name: Michael
-Enter your age: 30000
+Enter your age: 300
 Enter your email: michael@example.com
 Enter your country: Nigeria
 
 Profile saved successfully!
-
-# Author
-Michael Ukana – Python beginner-friendly CLI projects
