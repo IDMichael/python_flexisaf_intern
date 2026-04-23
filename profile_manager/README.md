@@ -23,15 +23,16 @@ This project is beginner-friendly and ideal for learning Python basics, function
 This program uses only Python standard libraries. No external packages required.
 
 Library	Purpose
-json    - 	Save and load profile data
-os      -   Check if profile file exists
+json - 	Save and load profile data
+
+os   -   Check if profile file exists
 
 # Running the Program
-* Save the Python code as user_profile.py in your project folder.
+* Save the Python code as profile_manager.py in your project folder.
 * Open Git Bash / terminal in the folder.
 
 Run the program:
-python user_profile.py
+python profile_manager.py
 
 On some systems you may need to use python3 profile_manager.py.
 
