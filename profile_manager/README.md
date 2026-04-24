@@ -23,6 +23,7 @@ This project is beginner-friendly and ideal for learning Python basics, function
 This program uses only Python standard libraries. No external packages required.
 
 Library	Purpose
+
 json - 	Save and load profile data
 
 os   -   Check if profile file exists
