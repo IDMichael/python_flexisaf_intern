@@ -1,5 +1,5 @@
 # Import functions from another file
-from todo_functions import add_task, list_task, mark_task_done, edit_task, delete_task
+from todo_functions import add_task, list_task, mark_task_done, delete_task
 
 # Function to display main menu options
 def show_menu():
